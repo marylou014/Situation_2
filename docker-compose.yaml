@@ -1,0 +1,63 @@
+  name: Situation2
+
+  services:
+    # ---------------------------------------------------------------------------
+    # LE SERVICE WEB (PHP / Apache)
+    web:
+      image: php:8.2-apache
+      container_name: web_1
+      restart: always
+      ports:                              # pour accéder au rendu sur le navigateur (http://localhost:8080)
+        - "8090:80"
+      volumes:
+        # La vitrine (Accessible par les visiteurs)
+        - ./public:/var/www/html
+
+        #  Les pièces détachées (Cachées des visiteurs, mais lisibles par PHP)
+        - ./includes:/var/www/includes
+
+        #  Le moteur (Caché des visiteurs, mais lisible par PHP)
+        - ./src:/var/www/src
+      networks:
+        - app-network
+    # ---------------------------------------------------------------------------
+    # SERVICE DE BASE DE DONNÉES (MariaDB)
+    db:
+      image: mariadb:latest
+      container_name: db_1
+      restart: always
+      environment:
+        MYSQL_ROOT_PASSWORD: rootpassword  # mot de passe admin
+        MYSQL_DATABASE: Situation2         # nom de la base créee automatiquement
+        MYSQL_USER: user                   # nom de l'utilisateur personnalisé
+        MYSQL_PASSWORD: password           # et son mot de passe
+      volumes:
+        - db_data:/var/lib/mysql           # pour ne pas perdre les données si le conteneur s'arrête
+      networks:
+        - app-network
+    # ---------------------------------------------------------------------------
+    # INTERFACE D'ADMINISTRATION (phpMyAdmin)
+    phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      container_name: phpmyadmin
+      restart: always
+      platform: linux/amd64
+      ports:                                # pour accéder à l'interface depuis le navigateur (http://localhost:8081)
+        - "8081:80"
+      environment:
+        PMA_HOST: db                        # indique à phpMyAdmin de se connecter au service "db" défini ci-dessus
+      depends_on:
+        - db                                # assure que le conteneur de base de données se lance en premier
+      networks:
+        - app-network
+
+  # -----------------------------------------------------------------------------
+  # VOLUMES GLOBAUX
+  volumes:
+    db_data:                               # Stocke les fichiers de la base de données en dehors du cycle de vie du conteneur
+
+  # -----------------------------------------------------------------------------
+  # RÉSEAUX GLOBAUX
+  networks:
+    app-network:
+      driver: bridge                       # Crée un réseau isolé permettant aux conteneurs de communiquer entre eux par leur nom
