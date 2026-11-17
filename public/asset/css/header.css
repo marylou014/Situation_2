@@ -1,0 +1,97 @@
+header {
+    background: var(--primaire);
+    color: var(--fond);
+    margin: 16px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.25);
+}
+
+/* Ligne : logo à gauche | onglets au centre | profil + déconnexion à droite */
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 24px;
+    min-height: 64px;
+}
+
+/* ===== LOGO & NOM (gauche) ===== */
+.zone-logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--fond);
+    text-decoration: none;
+}
+
+.logo-header img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+/* ===== NAVIGATION (centrée au milieu du bandeau) ===== */
+.nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.nav a {
+    padding: 8px 16px;
+    border-radius: 15px;
+    color: var(--fond);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav a:hover {
+    background: var(--tertiaire);
+    color: var(--primaire);
+}
+
+/* ===== PROFIL (droite) ===== */
+#icone-profil {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto; /* pousse profil + déconnexion tout à droite */
+}
+
+#icone-profil div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--tertiaire);
+    font-size: 1.2rem;
+}
+
+#icone-profil p {
+    font-weight: 500;
+}
+
+/* ===== DÉCONNEXION (droite) ===== */
+.déconnexion button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 999px;
+    background: var(--tertiaire);
+    color: var(--primaire);
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.déconnexion button:hover {
+    background: var(--fond);
+}

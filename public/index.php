@@ -1,3 +1,7 @@
+<?php
+include '../includes/headerEnt.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
