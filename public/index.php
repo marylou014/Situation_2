@@ -4,15 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Fiduciaire Dumas</title>
+    <link rel="stylesheet" href="asset/css/style.css">
 </head>
-<?php
-
-?>
 
 <body>
 
 <div class="container">
-    <a href="connexion.php" class="button secondary">Se connecter</a>
+    <a href="connexion.php">Se connecter</a>
 </div>
 
 </body>

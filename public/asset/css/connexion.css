@@ -1,0 +1,54 @@
+.login-box {
+    width: 100%;                  /* S'adapte à la largeur disponible */
+    margin: 200px auto;           /* 200px d'espace en haut/bas, centré automatiquement à l'horizontale */
+    max-width: 380px;             /* Largeur maximale pour éviter qu'il ne s'étire trop sur grand écran */
+    padding: 32px;                /* Espace interne (remplissage) de 32px tout autour */
+    background-color: #ffffff;
+    border: 1px solid var(--tertiaire);
+    border-radius: 8px;
+}
+
+.login-box h2 {
+    margin-bottom: 24px;          /* Espace en bas pour détacher le titre des champs */
+    text-align: center;
+    color: var(--primaire);
+}
+
+.login-box label {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--secondaire);
+}
+
+.login-box input {
+    width: 100%;                  /* Occupe toute la largeur disponible de la boîte */
+    margin-top: 6px;              /* Petit espace au-dessus pour le séparer du label */
+    padding: 10px;                /* Espace interne confortable pour taper du texte */
+    font-size: 15px;
+    border: 1px solid var(--tertiaire);
+    border-radius: 4px;
+    background-color: var(--fond);
+    color: var(--texte);
+}
+
+.login-box input:focus {
+    outline: none;                /* Supprime le contour par défaut du navigateur */
+    border-color: var(--primaire);/* Change la couleur de la bordure */
+}
+
+#login-button {
+    width: 100%;                  /* Bouton pleine largeur */
+    margin-top: 20px;             /* Espace au-dessus pour le détacher des champs du dessus */
+    padding: 12px;                /* Hauteur et espacement internes confortables pour cliquer */
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: var(--primaire);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;              /* Transforme le curseur en main */
+}
+
+#login-button:hover {
+    background-color: var(--secondaire);
+}
