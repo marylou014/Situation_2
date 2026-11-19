@@ -57,25 +57,36 @@ header {
 }
 
 /* ===== PROFIL (droite) ===== */
+.profil-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: auto;
+}
+
+/* Le bloc unique : emoji + nom */
 #icone-profil {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-left: auto; /* pousse profil + déconnexion tout à droite */
+    gap: 10px;
+    padding: 4px 16px 4px 4px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
 }
 
-#icone-profil div{
+#icone-profil .emoji {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: var(--tertiaire);
+    background: var(--fond);
     font-size: 1.2rem;
 }
 
 #icone-profil p {
+    margin: 0;
     font-weight: 500;
 }
 

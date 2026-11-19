@@ -1,5 +1,6 @@
 <?php
 include '../includes/headerEnt.php';
+include '../includes/headerGes.php';
 ?>
 
 <!DOCTYPE html>

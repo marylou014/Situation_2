@@ -25,17 +25,18 @@
                 <a href="public/entreprise/archive.php">Archives</a>
             </nav>
 
-            <!--BOUTON Déconnexion + profil -->
-            <!-- Profil: affiche le nom de l'entreprise -->
-            <div id="icone-profil">
-                <div>
-                    🏢
-                </div>
-                <p>Nom Entreprise</p>
-            </div>
-            <div class="déconnexion">
-                <button> Déconnexion </button>
-            </div>
+           <!-- BOUTON Déconnexion + profil -->
+           <div class="profil-actions">
+               <!-- Profil : affiche le nom de l'entreprise -->
+               <div id="icone-profil">
+                   <span class="emoji">🏢</span>
+                   <p>Nom Entreprise</p>
+               </div>
 
+               <div class="déconnexion">
+                   <button>Déconnexion</button>
+               </div>
+           </div>
+       </div>
     </div>
 </header>
