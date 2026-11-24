@@ -15,6 +15,8 @@
 
 <div class="container">
     <a href="connexion.php">Se connecter</a>
+    <a href="gestionnaire/homeGes.php">interface gestionnaire</a>
+    <a href="entreprise/homeEnt.php">interface entreprise</a>
 </div>
 
 
