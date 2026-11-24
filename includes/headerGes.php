@@ -20,8 +20,8 @@
 
             <!-- NAVIGATION PRINCIPALE -->
             <nav class="nav">
-                <a href="/gestionaire/homeGes.php">Accueil</a>
-                <a href="/gestionaire/dossiers.php">Dossiers</a>
+                <a href="/gestionnaire/homeGes.php">Accueil</a>
+                <a href="/gestionnaire/dossiers.php">Dossiers</a>
             </nav>
 
            <!-- BOUTON Déconnexion + profil -->
