@@ -1,6 +1,22 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+main {
+    flex: 1; /* le contenu prend toute la place restante */
+}
+
 footer {
     color: var(--fond);
     background-color: var(--primaire);
+    margin-top: auto; /* sécurité supplémentaire */
 }
 
 .footer {

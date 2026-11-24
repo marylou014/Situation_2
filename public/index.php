@@ -1,6 +1,5 @@
 <?php
-include '../includes/headerEnt.php';
-include '../includes/headerGes.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +17,13 @@ include '../includes/headerGes.php';
     <a href="connexion.php">Se connecter</a>
 </div>
 
+
+<footer>
+    <?php
+        include '../includes/footer.php';
+    ?>
+</footer>
 </body>
 
 </html>
+
