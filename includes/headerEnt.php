@@ -20,9 +20,9 @@
 
             <!-- NAVIGATION PRINCIPALE -->
             <nav class="nav">
-                <a href="public/entreprise/homeEnt.php">Accueil</a>
-                <a href="public/entreprise/salarier.php">Salariers</a>
-                <a href="public/entreprise/archive.php">Archives</a>
+                <a href="/entreprise/homeEnt.php">Accueil</a>
+                <a href="/entreprise/salarier.php">Salariers</a>
+                <a href="/entreprise/archive.php">Archives</a>
             </nav>
 
            <!-- BOUTON Déconnexion + profil -->
